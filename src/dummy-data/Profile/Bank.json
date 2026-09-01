@@ -1,0 +1,9 @@
+ [
+  {
+  "accountHolder": "John Doe",
+  "bankName": "HDFC Bank",
+  "accountNumber": "1234567890",
+  "ifsc": "HDFC0001234"
+}
+
+]

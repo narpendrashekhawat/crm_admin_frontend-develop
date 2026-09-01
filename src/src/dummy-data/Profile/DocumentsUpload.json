@@ -1,0 +1,39 @@
+[
+
+    {
+        "id": 1,
+        "FileName":"PAN",
+        "FileDetails":"Pending Documents",
+        "UploadDate": "16/11/2022"
+    },
+    {
+        "id": 2,
+        "FileName":"CIN",
+        "FileDetails":"28.50KB",
+        "UploadDate": "16/11/2022"
+    },
+    {
+        "id": 3,
+        "FileName":"Drug License",
+        "FileDetails":"28.50KB",
+        "UploadDate": "16/11/2022"
+    },
+    {
+        "id": 4,
+        "FileName":"Manufacturing License",
+        "FileDetails":"28.50KB",
+        "UploadDate": "16/11/2022"
+    },
+    {
+        "id": 5,
+        "FileName":"Drug License",
+        "FileDetails":"28.50KB",
+        "UploadDate": "16/11/2022"
+    },
+    {
+        "id": 6,
+        "FileName":"ISO",
+        "FileDetails":"28.50KB",
+        "UploadDate": "16/11/2022"
+    }
+]

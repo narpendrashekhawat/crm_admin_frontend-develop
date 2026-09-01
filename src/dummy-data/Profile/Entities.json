@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "DivisionName": "AI Research",
+        "UserName": "GJ5006",
+        "Location": "Jaipur",
+        "CreatedOn": "10/10/2022",
+        "ClosedOn": "12/12/2022",
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "DivisionName": "Cyber Security",
+        "UserName": "MK3021",
+        "Location": "Delhi",
+        "CreatedOn": "05/08/2023",
+        "ClosedOn": "N/A",
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "DivisionName": "Cloud Computing",
+        "UserName": "RT9087",
+        "Location": "Bangalore",
+        "CreatedOn": "20/03/2021",
+        "ClosedOn": "18/07/2023",
+        "isActive": false
+    },
+    {
+        "id": 4,
+        "DivisionName": "Data Analytics",
+        "UserName": "SP6574",
+        "Location": "Hyderabad",
+        "CreatedOn": "15/06/2020",
+        "ClosedOn": "25/09/2022",
+        "isActive": false
+    },
+    {
+        "id": 5,
+        "DivisionName": "IoT Solutions",
+        "UserName": "AK1123",
+        "Location": "Pune",
+        "CreatedOn": "30/11/2023",
+        "ClosedOn": "N/A",
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "DivisionName": "Cyber Security",
+        "UserName": "MK3021",
+        "Location": "Delhi",
+        "CreatedOn": "05/08/2023",
+        "ClosedOn": "N/A",
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "DivisionName": "Cloud Computing",
+        "UserName": "RT9087",
+        "Location": "Bangalore",
+        "CreatedOn": "20/03/2021",
+        "ClosedOn": "18/07/2023",
+        "isActive": false
+    },
+    {
+        "id": 4,
+        "DivisionName": "Data Analytics",
+        "UserName": "SP6574",
+        "Location": "Hyderabad",
+        "CreatedOn": "15/06/2020",
+        "ClosedOn": "25/09/2022",
+        "isActive": false
+    },
+    {
+        "id": 5,
+        "DivisionName": "IoT Solutions",
+        "UserName": "AK1123",
+        "Location": "Pune",
+        "CreatedOn": "30/11/2023",
+        "ClosedOn": "N/A",
+        "isActive": true
+    }
+]

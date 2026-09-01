@@ -1,0 +1,27 @@
+name: Deploy QA
+
+on:
+  push:
+    branches:
+      - QA
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            cd /opt/jee1tech
+
+            echo "Updating repository..."
+            ./deploy.sh adminfrontendqa
+
+            docker image prune -f
+
+            echo "Deployment completed successfully"

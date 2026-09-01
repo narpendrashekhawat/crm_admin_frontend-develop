@@ -1,0 +1,14 @@
+[
+    {
+        "CompanyName": "SilverTech Solutions",
+        "EmailAddress": "info@silvertech.com",
+        "VerificationStatus": true,
+        "ManufacturingLicenseId": "MNL555555444",
+        "WholesaleLicenseId": "WL555555444",
+        "PhoneNumber": "800 123 4567",
+        "PAN": "GHJKKL8901J",
+        "GST": "GSTIN54321C2R1",
+        "CIN": "A12345DL2003PLC456789",
+        "FSSAI": "FSSAI543210987"
+    }
+]

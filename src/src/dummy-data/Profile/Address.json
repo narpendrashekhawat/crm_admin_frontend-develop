@@ -1,0 +1,12 @@
+[
+    {
+        "Name": "Raj Industries",
+        "Number": "+91 98765 43210",
+        "Email": "info@rajindustries.in",
+        "WebsiteAddress": "https://www.rajindustries.in",
+        "Address": "15, MG Road, Sector 12",
+        "City": "Mumbai",
+        "State": "Maharashtra",
+        "Pin": "400001"  
+    }
+]

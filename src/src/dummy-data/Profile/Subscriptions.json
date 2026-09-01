@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "Subscription": "AI Reports",
+        "Plan": "Monthly",
+        "Amount": "Rs 2000.00",
+        "StartDate": "16/11/2022",
+        "NextRenewal": "16/12/2022",
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "Subscription": "Cloud Storage",
+        "Plan": "Annual",
+        "Amount": "Rs 15000.00",
+        "StartDate": "01/01/2023",
+        "NextRenewal": "01/01/2024",
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "Subscription": "Cyber Security Suite",
+        "Plan": "Quarterly",
+        "Amount": "Rs 5000.00",
+        "StartDate": "05/06/2022",
+        "NextRenewal": "05/09/2022",
+        "isActive": false
+    },
+    {
+        "id": 4,
+        "Subscription": "Business Intelligence",
+        "Plan": "Monthly",
+        "Amount": "Rs 2500.00",
+        "StartDate": "10/03/2023",
+        "NextRenewal": "10/04/2023",
+        "isActive": true
+    },
+    {
+        "id": 5,
+        "Subscription": "IoT Platform",
+        "Plan": "Semi-Annual",
+        "Amount": "Rs 8000.00",
+        "StartDate": "20/07/2023",
+        "NextRenewal": "20/01/2024",
+        "isActive": false
+    },
+    {
+        "id": 2,
+        "Subscription": "Cloud Storage",
+        "Plan": "Annual",
+        "Amount": "Rs 15000.00",
+        "StartDate": "01/01/2023",
+        "NextRenewal": "01/01/2024",
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "Subscription": "Cyber Security Suite",
+        "Plan": "Quarterly",
+        "Amount": "Rs 5000.00",
+        "StartDate": "05/06/2022",
+        "NextRenewal": "05/09/2022",
+        "isActive": false
+    },
+    {
+        "id": 4,
+        "Subscription": "Business Intelligence",
+        "Plan": "Monthly",
+        "Amount": "Rs 2500.00",
+        "StartDate": "10/03/2023",
+        "NextRenewal": "10/04/2023",
+        "isActive": true
+    },
+    {
+        "id": 5,
+        "Subscription": "IoT Platform",
+        "Plan": "Semi-Annual",
+        "Amount": "Rs 8000.00",
+        "StartDate": "20/07/2023",
+        "NextRenewal": "20/01/2024",
+        "isActive": false
+    }
+]

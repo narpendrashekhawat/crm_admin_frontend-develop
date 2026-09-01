@@ -1,0 +1,124 @@
+ [
+    {
+        "id": 1,
+        "Manufacturers Name": "Janet Adebayo",
+        "Email": "janet.a@mail.com",
+        "Phone": "+234567890",
+        "Party Code": "#10234938t",
+        "Location": "Rajasthan",
+        "Last Active": "12 Aug 2022 - 12:25 am",
+        "User Since": "12 Aug 2022",
+        "Status": true
+        
+    },
+    {
+        "id": 2,
+        "Manufacturers Name": "David Johnson",
+        "Email": "david.j@mail.com",
+        "Phone": "+123456789",
+        "Party Code": "#10234938u",
+        "Location": "Lagos",
+        "Last Active": "10 Jan 2023 - 08:15 pm",
+        "User Since": "05 Jan 2023",
+        "Status": false
+    },
+    {
+        "id": 3,
+        "Manufacturers Name": "Janet Adebayo",
+        "Email": "janet.a@mail.com",
+        "Phone": "+234567890",
+        "Party Code": "#10234938t",
+        "Location": "Rajasthan",
+        "Last Active": "12 Aug 2022 - 12:25 am",
+        "User Since": "12 Aug 2022",
+        "Status": true
+    },
+    {
+        "id": 4,
+        "Manufacturers Name": "David Johnson",
+        "Email": "david.j@mail.com",
+        "Phone": "+123456789",
+        "Party Code": "#10234938u",
+        "Location": "Lagos",
+        "Last Active": "10 Jan 2023 - 08:15 pm",
+        "User Since": "05 Jan 2023",
+        "Status": true
+    },
+    {
+        "id": 5,
+        "Manufacturers Name": "Janet Adebayo",
+        "Email": "janet.a@mail.com",
+        "Phone": "+234567890",
+        "Party Code": "#10234938t",
+        "Location": "Rajasthan",
+        "Last Active": "12 Aug 2022 - 12:25 am",
+        "User Since": "12 Aug 2022",
+        "Status": true
+    },
+    {
+        "id": 6,
+        "Manufacturers Name": "David Johnson",
+        "Email": "david.j@mail.com",
+        "Phone": "+123456789",
+        "Party Code": "#10234938u",
+        "Location": "Lagos",
+        "Last Active": "10 Jan 2023 - 08:15 pm",
+        "User Since": "05 Jan 2023",
+        "Status": true
+    },
+    {
+        "id": 7,
+        "Manufacturers Name": "Janet Adebayo",
+        "Email": "janet.a@mail.com",
+        "Phone": "+234567890",
+        "Party Code": "#10234938t",
+        "Location": "Rajasthan",
+        "Last Active": "12 Aug 2022 - 12:25 am",
+        "User Since": "12 Aug 2022",
+        "Status": true
+    },
+    {
+        "id": 8,
+        "Manufacturers Name": "David Johnson",
+        "Email": "david.j@mail.com",
+        "Phone": "+123456789",
+        "Party Code": "#10234938u",
+        "Location": "Lagos",
+        "Last Active": "10 Jan 2023 - 08:15 pm",
+        "User Since": "05 Jan 2023",
+        "Status": true
+    },
+    {
+        "id": 9,
+        "Manufacturers Name": "Janet Adebayo",
+        "Email": "janet.a@mail.com",
+        "Phone": "+234567890",
+        "Party Code": "#10234938t",
+        "Location": "Rajasthan",
+        "Last Active": "12 Aug 2022 - 12:25 am",
+        "User Since": "12 Aug 2022",
+        "Status": true
+    },
+    {
+        "id": 10,
+        "Manufacturers Name": "David Johnson",
+        "Email": "david.j@mail.com",
+        "Phone": "+123456789",
+        "Party Code": "#10234938u",
+        "Location": "Lagos",
+        "Last Active": "10 Jan 2023 - 08:15 pm",
+        "User Since": "05 Jan 2023",
+        "Status": true
+    },
+    {
+        "id": 11,
+        "Manufacturers Name": "Alice Smith",
+        "Email": "alice.s@mail.com",
+        "Phone": "+987654321",
+        "Party Code": "#10234938v",
+        "Location": "California",
+        "Last Active": "23 Mar 2024 - 03:45 pm",
+        "User Since": "01 Mar 2024",
+        "Status": true
+    }
+]
