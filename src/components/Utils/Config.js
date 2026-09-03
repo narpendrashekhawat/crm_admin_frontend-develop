@@ -94,6 +94,8 @@ export const Config = {
     search_dis: `${NEW_BASE_URL}get-list/distributor`,
     stocks_by_dis: `${BASE_URL}api/get-distributor-stocks`,
     Upload_Stock_Sheet: `${CSV_URL}upload`,
+    Bulk_Upload:`${CSV_URL}upload-supplier-bulk`,
+    Bulk_Upload_Auth: `${BASE_URL}upload-supplier-auth`,
     org_plans_list: `${NEW_BASE_URL}org-plan-list`,
     create_org_plan: `${NEW_BASE_URL}create-org-plan-admin`,
     get_dis_stats: `${BASE_URL}api/distributors/stats-dis-panel`,

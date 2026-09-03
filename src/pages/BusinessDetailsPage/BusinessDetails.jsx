@@ -48,6 +48,10 @@ const tabs = [
         id: "stocks",
         label: "Stocks",
     },
+    {
+        id: "bulk-upload",
+        label: "Bulk Upload",
+    },
 ];
 
 const BusinessDetails = () => {
@@ -68,6 +72,10 @@ const BusinessDetails = () => {
     const [openUpload, setOpenUpload] = useState(false);
     const [stockSheet, setStockSheet] = useState(null);
     const [uploadingStockSheet, setUploadingStockSheet] = useState(false);
+
+    const [bulkFile, setBulkFile] = useState(null);
+    const [uploadingBulkFile, setUploadingBulkFile] = useState(false);
+    const [openBulkUpload, setOpenBulkUpload] = useState(false);
 
     const [stockSearch, setStockSearch] = useState("");
     const [stockDebouncedSearch, setStockDebouncedSearch] = useState("");
@@ -274,6 +282,57 @@ const BusinessDetails = () => {
         }
     };
 
+    const handleBulkUpload = async () => {
+        try {
+            if (!bulkFile) return;
+
+            setUploadingBulkFile(true);
+
+         // Step 1: Upload the file first
+            const formData = new FormData();
+            formData.append("file", bulkFile);
+            formData.append("uploadedBy", id);
+
+            const uploadRes = await axios.post(Config.Bulk_Upload, formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                    Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+                },
+            });
+
+            if (uploadRes?.status !== 200) {
+                console.log("Upload step failed", uploadRes);
+                return;
+            }
+            let rows = [];
+            if (uploadRes?.status === 200) {
+                rows = uploadRes?.data?.columns?.rows || [];
+               
+            }
+
+            // Step 2: Authenticate the uploaded file
+            const authRes = await axios.post(`${Config.Bulk_Upload_Auth}/${id}`,{
+                "rows": rows,
+                },
+                {    headers: {
+                        Authorization: `Bearer ${localStorage.getItem("authToken")}`
+
+                    },
+                }
+            );
+
+            if (authRes?.status === 200) {
+                setOpenBulkUpload(false);
+                setBulkFile(null);
+            }
+        } catch (error) {
+            console.log("Error during bulk upload", error);
+        } finally {
+            setUploadingBulkFile(false);
+        }
+        
+    };
+
     const formatDate = (date) => {
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -336,7 +395,7 @@ const BusinessDetails = () => {
 
                 endDate = formatDate(lastDay);
 
-            }
+            }                           
 
             const res = await axios.get(
                 `${Config.get_dis_stats}?orgId=${orgId}&startDate=${startDate}&endDate=${endDate}`,
@@ -1266,8 +1325,10 @@ const BusinessDetails = () => {
 
                     </Box>
                 );
+            
+                   
             default:
-                return null;
+             return null;
         }
     };
 
@@ -1324,6 +1385,56 @@ const BusinessDetails = () => {
                 </ModalContent>
 
             </Modal>
+            <Modal
+                isOpen={openBulkUpload}
+                onClose={() => setOpenBulkUpload(false)}
+                isCentered
+            >
+                <ModalOverlay />
+                <ModalContent width="440px" height="240px">
+                    <ModalHeader>Bulk Upload</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody >
+                        <Button
+                        as="a"
+                        href="/sample_bulk_upload.xlsx"
+                        download="sample_bulk_upload.xlsx"
+                        variant="outline"
+                        size="sm"
+                        mb={3}
+                    >
+                        Download Sample File
+
+                    </Button>
+                    <Input
+                        type="file"
+                        accept=".xlsx,.xls,.csv"
+                        p={1}
+                        onChange={(e) => 
+                            setBulkFile(e.target.files[0])
+                        }
+                        />
+                        </ModalBody>
+                        <ModalFooter gap={3}>
+                            <Button
+                                variant="ghost"
+                                onClick={() => setOpenBulkUpload(false)}
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                colorScheme="purple"
+                                onClick={handleBulkUpload}
+                                isLoading={uploadingBulkFile}
+                            >
+                                Upload
+
+
+                            </Button>
+                        </ModalFooter>
+                        </ModalContent>
+                        </Modal>
+
             <Box backgroundColor="#F0F4F9" minH="100vh">
                 <HStack
                     justifyContent="space-between"
@@ -1384,7 +1495,7 @@ const BusinessDetails = () => {
                             >
                                 <Box>
                                     <Heading size="lg" color="gray.800">
-                                        {state.disName}
+                                        {state?.disName}
                                     </Heading>
                                 </Box>
                             </Flex>
@@ -1399,39 +1510,52 @@ const BusinessDetails = () => {
                                 width="fit-content"
                                 mb={2}
                             >
-                                {tabs.map((tab) => (
+                                {tabs.map((tab) => {
+                                    const isActive = openBulkUpload 
+                                    ? tab.id === "bulk-upload"
+                                    : activeTab === tab.id;
+
+                                    return (
+
+                        
                                     <Button
                                         key={tab.id}
-                                        onClick={() =>
-                                            setActiveTab(tab.id)
-                                        }
+                                        onClick={() => {
+                                        console.log("Tab clicked:", tab.id, "openBulkUpload will be:", tab.id === "bulk-upload");
+                                        tab.id === "bulk-upload"
+                                       ? setOpenBulkUpload(true)
+                                       : setActiveTab(tab.id);
+                                       }}
+                                        
                                         borderRadius="lg"
                                         px={6}
                                         variant={
-                                            activeTab === tab.id
+                                            isActive
+                                            
                                                 ? "solid"
                                                 : "ghost"
                                         }
                                         bg={
-                                            activeTab === tab.id
+                                            isActive
                                                 ? "purple.600"
                                                 : "transparent"
                                         }
                                         color={
-                                            activeTab === tab.id
+                                            isActive
                                                 ? "white"
                                                 : "gray.600"
                                         }
                                         _hover={{
                                             bg:
-                                                activeTab === tab.id
+                                                isActive
                                                     ? "purple.700"
                                                     : "purple.50",
                                         }}
                                     >
                                         {tab.label}
                                     </Button>
-                                ))}
+                                );
+                            })}
                             </Flex>
 
                             {/* Content */}
