@@ -1397,8 +1397,8 @@ const BusinessDetails = () => {
                     <ModalBody >
                         <Button
                         as="a"
-                        href="/sample_bulk_upload.xlsx"
-                        download="sample_bulk_upload.xlsx"
+                        href="https://jee1-live1.s3.ap-south-1.amazonaws.com/sample_sheet/supplier+Retailer+-+supplier+-+upload+admin+panel.csv"
+                        download="sample_bulk_upload.csv"
                         variant="outline"
                         size="sm"
                         mb={3}
